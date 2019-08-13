@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        width: 100%;
+    }
+
+    select {
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <select name="speed">
+        <option value="0.2">0.2</option>
+        <option value="0.4">0.4</option>
+        <option value="0.8">0.8</option>
+    </select>
+    <div class="aaa1">
+        <a href="baidu.com"></a>
+        <div class="gg">123</div>
+        <span>2222</span>
+        <input type="text" name="" id="">
+    </div>
+    <script>
+        let str = 'Zanele Situ: My Story'
+        let a = str.toLowerCase().replace(/\ /g, "-");
+        console.log(a)
+
+        let speed = document.getElementsByName('speed')[0].value = 0.8
+        console.log(speed)
+
+        var aa = document.getElementsByClassName("aaa1")[0].children[0].href
+        console.log(aa);
+
+        let arr = [{
+            id: 1,
+            name: 'q'
+        }, {
+            id: 2,
+            name: 'w'
+        }, {
+            id: 3,
+            name: 'e'
+        }];
+
+
+        let e = '         e  p  w    '
+        console.log(e)
+        e = trim(e)
+        console.log(e)
+
+        function trim(s) {
+            return s.replace(/(^\s*)|(\s*$)/g, "");
+        }
+        let str2 =
+            'L.K.1 Demonstrate command of the conventions of standard English grammar and usage when writing or speaking.'
+        let star = str2.indexOf(' ')
+        console.log(str2)
+
+        console.log(str2.substr(0, star))
+        console.log(str2.substr(star + 1))
+
+        let str3 = 'Find a word in a sentence (K-C.3)'
+        let star3 = str3.indexOf('(')
+
+        console.log(str3)
+
+        console.log(str3.substr(0, star3 - 1))
+        console.log(str3.substr(star3)) 
+
+        function SubmitCk() {
+            var reg = /[0-9]/;
+            console.log(reg.test('qaddgdwewe   2    21asda'))
+            if (!reg.test('qaddgdwewe2')) {
+                alert("请输入正确邮箱地址")
+                return false;
+            }
+        };
+        SubmitCk();
+
+        let str1 = "旧字符串'qweqw"
+        let tempPath = str1.replace(/'/g, "\\'");
+        console.log(tempPath,'/////','\\')
+
+        const obj = {
+            a: 'ss',
+            b: 'bb',
+            c: 'cc',
+        }
+
+        for (let key in obj) {
+            obj[key] = obj[key].replace(/ss/g, "\'999");
+            console.log(key, obj[key])
+        }
+        console.log(obj)
+
+        var reg=/\\|\//g;
+        var aa="a\a\\a/b"
+
+        alert(aa.replace(reg,"-"));
+    </script>
+</body>
+
+</html>

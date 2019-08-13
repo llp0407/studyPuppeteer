@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let obj = {};
+    let index = "https://storyweaver.org.in/stories/7-fat-king-thin-dog".lastIndexOf("\/");  
+    obj.name  = "https://storyweaver.org.in/stories/7-fat-king-thin-dog".substring(index + 1, "https://storyweaver.org.in/stories/7-fat-king-thin-dog" .length)+".pdf";
+    obj.url = "http://storyweaver.org.in/v0/stories/download-story/" + obj.name;
+    console.log(obj)
+    let arr=[1,2,3]
+    console.log(arr.indexOf(6))
+    let timeout = function (delay) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                try {
+                    resolve(1)
+                } catch (e) {
+                    reject(0)
+                }
+            }, delay);
+        })
+    }
+    for(let i=0;i<10;i++){
+        try{
+            timeout(1000)
+            console.log(666)
+        }
+        catch{
+            console.log('err')
+        }
+    }
+    </script>
+</body>
+</html>
